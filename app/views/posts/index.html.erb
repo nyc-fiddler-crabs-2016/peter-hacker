@@ -20,10 +20,8 @@
           <form method="get" action='/posts/<%="#{post.id}"%>/edit'>
             <input type="submit" value="Edit!" class="button">
           </form>
-          <form method = "post" action='/posts/<%="#{post.id}"%>'>
-            <input type="hidden" name="_method" value ="delete">
-            <input type="submit" value="Delete post" class="button">
-          </form>
+          <%= link_to "Delete my post", post, method: :delete, data: {confirm: "Are you sure you want to delete that?"} %>
+        <% end %>
         <% end %>
           </span>
       </span>
